@@ -179,13 +179,13 @@ align-items: center;
 
 .container__gifts{
     display: flex;
-    
     justify-content: space-between;
     padding: 0 40px;
+    
 }
 
 .gifts__images{
-    width: 100%;
+    width: 90%;
 }
 
 /*Seccion de Promos*/
@@ -210,4 +210,192 @@ align-items: center;
 
 .promos__specific_image{
     border-radius: 10px;
+    width: 100%;
+}
+
+
+/* ----------------------------------------
+   MEDIA QUERIES PARA RESPONSIVE DESIGN
+-------------------------------------------*/
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .principal {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .principal__images {
+    padding: 20px;
+  }
+
+  .principal__unordered_list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search__bar {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .menu__unorder_list {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .container__categories {
+    grid-template-columns: 1fr;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .container__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits_bar__second {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container__gifts {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .promos__images {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+  .principal {
+    grid-template-columns: 1fr;
+  }
+
+  .principal__unordered_list {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .search__bar {
+    width: 90%;
+  }
+
+  .menu__unorder_list {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .menu__list {
+    flex: 0 0 auto;
+    padding: 0 10px;
+  }
+
+  .container__categories {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    width: 95%;
+  }
+
+  .container__products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .products__product {
+    padding: 0 10px;
+  }
+
+  .benefits_bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .benefits_bar__second {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container__gifts {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .gifts__gif1 {
+    margin-bottom: 10px;
+  }
+
+  .promos__images {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .promos__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container__products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .products__category {
+    padding: 10px;
+  }
+
+  .products__product {
+    width: 80%;
+    padding: 0;
+  }
+
+  .products__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container__products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .products__category {
+    padding: 5px;
+  }
+
+  .products__product {
+    width: 70%;
+  }
+
+  .products__text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container__products {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .products__product {
+    width: 60%;
+  }
+
+  .products__text {
+    font-size: 11px;
+  }
 }
